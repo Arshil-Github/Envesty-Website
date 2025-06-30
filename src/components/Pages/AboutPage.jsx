@@ -1,36 +1,36 @@
-import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
+import React, { useEffect } from "react";
+import { pageTitle } from "../../helper";
+import Cta from "../Cta";
+import PageHeading from "../PageHeading";
+import Div from "../Div";
+import SectionHeading from "../SectionHeading";
+import Spacing from "../Spacing";
 // import { ChevronsRight } from 'lucide-react';
-import styles from './AboutPage.module.css';
+import styles from "./AboutPage.module.css";
 
 export default function AboutPage() {
-  pageTitle('About');
+  pageTitle("About");
 
   const funfaceData = [
     {
-      title: 'Virtual Co-Founder',
-      link: '/services#virtual-cofounder'
+      title: "Virtual Co-Founder",
+      link: "/services#virtual-cofounder",
     },
     {
-      title: 'Digital Transformation',
-      link: '/services#digital-transformation'
+      title: "Digital Transformation",
+      link: "/services#digital-transformation",
     },
     {
-      title: 'Legal Consultancy',
-      link: '/services#legal-consultancy'
+      title: "Legal Consultancy",
+      link: "/services#legal-consultancy",
     },
     {
-      title: 'Business Consultancy',
-      link: '/services#business-consultancy'
+      title: "Business Consultancy",
+      link: "/services#business-consultancy",
     },
     {
-      title: 'Personal Finance & Counselling',
-      link: '/services#personal-finance'
+      title: "Personal Finance & Counselling",
+      link: "/services#personal-finance",
     },
   ];
 
@@ -58,7 +58,14 @@ export default function AboutPage() {
                 >
                   <div className={styles.aboutContent}>
                     <p>
-                    At Envesty, we are committed to being your Growth & Wealth Partner, empowering both businesses and individuals to achieve financial success and sustainable growth. Our unique approach integrates Business Services—including Virtual Co-Founder mentorship, Digital Transformation, Legal Consultancy, and Business Advisory—with Personal Finance solutions such as Financial Planning and Masterclasses.
+                      At Envesty, we are committed to being your Growth & Wealth
+                      Partner, empowering both businesses and individuals to
+                      achieve financial success and sustainable growth. Our
+                      unique approach integrates Business Services—including
+                      Virtual Co-Founder mentorship, Digital Transformation,
+                      Legal Consultancy, and Business Advisory—with Personal
+                      Finance solutions such as Financial Planning and
+                      Masterclasses.
                     </p>
                   </div>
                   <div className={styles.separator}></div>
@@ -69,7 +76,7 @@ export default function AboutPage() {
               <div className={styles.aboutCard}>
                 <div className={styles.imageWrapper}>
                   <img
-                    src="images/demo/🔍 Is Your Business Ready for an Audit_ Knowing….jpeg"
+                    src="images/demo/business-audit.jpeg"
                     alt="About Envesty"
                     className="w-100"
                   />
@@ -82,11 +89,7 @@ export default function AboutPage() {
 
           <div className={styles.funFactGrid}>
             {funfaceData.map((item, index) => (
-              <a 
-                key={index} 
-                href={item.link} 
-                className={styles.funFactCard}
-              >
+              <a key={index} href={item.link} className={styles.funFactCard}>
                 <h3 className={styles.funFactTitle}>{item.title}</h3>
               </a>
             ))}
@@ -115,10 +118,20 @@ export default function AboutPage() {
                 >
                   <div className={styles.aboutContent}>
                     <p>
-                    We understand that financial stability and business success go hand in hand. That’s why we provide a holistic ecosystem where MSMEs, startups, and individuals can access expert-backed mentorship, compliance support, and wealth-building strategies—all under one trusted platform.
+                      We understand that financial stability and business
+                      success go hand in hand. That’s why we provide a holistic
+                      ecosystem where MSMEs, startups, and individuals can
+                      access expert-backed mentorship, compliance support, and
+                      wealth-building strategies—all under one trusted platform.
                     </p>
                     <p>
-                    With a strong focus on affordability, accessibility, and impact, we offer Big 4-level expertise at MSME-friendly prices, ensuring that businesses grow efficiently and individuals secure their financial futures. Whether you’re an entrepreneur looking to scale or an individual planning your investments, Envesty is your one-stop solution for success.
+                      With a strong focus on affordability, accessibility, and
+                      impact, we offer Big 4-level expertise at MSME-friendly
+                      prices, ensuring that businesses grow efficiently and
+                      individuals secure their financial futures. Whether you’re
+                      an entrepreneur looking to scale or an individual planning
+                      your investments, Envesty is your one-stop solution for
+                      success.
                     </p>
                     {/* <p className="cs-m0">
                       <ChevronsRight /> Affordable Solutions: We are committed to making our services cost-effective without compromising quality.

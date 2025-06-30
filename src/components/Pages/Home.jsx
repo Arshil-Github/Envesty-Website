@@ -1,102 +1,103 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 // import InfoLine from '../InfoLine';
-import Hero from '../Hero';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import { pageTitle } from '../../helper';
-import styles from './Home.module.css';
-import { motion } from 'framer-motion';
-import ConsultationForm from '../ConsultationForm/ConsultationForm';
+import Hero from "../Hero";
+import Div from "../Div";
+import SectionHeading from "../SectionHeading";
+import Spacing from "../Spacing";
+import { pageTitle } from "../../helper";
+import styles from "./Home.module.css";
+import { motion } from "framer-motion";
+import ConsultationForm from "../ConsultationForm/ConsultationForm";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [showConsultation, setShowConsultation] = useState(false);
   const [hasShownPopup, setHasShownPopup] = useState(false);
   const navigate = useNavigate();
-  pageTitle('Home');
+  pageTitle("Home");
 
   const showcaseData = [
     {
-      title: 'Your Virtual Co-Founder and Wealth Partner',
+      title: "Your Virtual Co-Founder and Wealth Partner",
       buttons: (
         <div className={styles.buttonGroup}>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/services')}
+            onClick={() => navigate("/services")}
           >
             Explore Our Services
           </button>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/contact')}
+            onClick={() => navigate("/contact")}
           >
             Book Free Consultation
           </button>
         </div>
       ),
-      bgImageUrl: '/images/slider_1.jpeg',
+      bgImageUrl: "/images/slider_1.jpeg",
     },
     {
-      title: 'Unlock Your Entrepreneurial Potential and Build a Thriving Business',
+      title:
+        "Unlock Your Entrepreneurial Potential and Build a Thriving Business",
       buttons: (
         <div className={styles.buttonGroup}>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/services')}
+            onClick={() => navigate("/services")}
           >
             Explore Our Services
           </button>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/contact')}
+            onClick={() => navigate("/contact")}
           >
             Book Free Consultation
           </button>
         </div>
       ),
-      bgImageUrl: '/images/slider_1.jpeg',
+      bgImageUrl: "/images/slider_1.jpeg",
     },
     {
-      title: 'Simplify Your Business Compliance and Scale with Ease',
+      title: "Simplify Your Business Compliance and Scale with Ease",
       buttons: (
         <div className={styles.buttonGroup}>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/services')}
+            onClick={() => navigate("/services")}
           >
             Explore Our Services
           </button>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/contact')}
+            onClick={() => navigate("/contact")}
           >
             Book Free Consultation
           </button>
         </div>
       ),
-      bgImageUrl: '/images/slider_1.jpeg',
+      bgImageUrl: "/images/slider_1.jpeg",
     },
     {
-      title: 'Master Financial Planning and Grow Your Wealth with Confidence',
+      title: "Master Financial Planning and Grow Your Wealth with Confidence",
       buttons: (
         <div className={styles.buttonGroup}>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/services')}
+            onClick={() => navigate("/services")}
           >
             Explore Our Services
           </button>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
-            onClick={() => navigate('/contact')}
+            onClick={() => navigate("/contact")}
           >
             Book Free Consultation
           </button>
         </div>
       ),
-      bgImageUrl: '/images/slider_1.jpeg',
+      bgImageUrl: "/images/slider_1.jpeg",
     },
     // {
     //   title: 'Navigate Your Financial Future <br> with Tailored Advice',
@@ -113,7 +114,7 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    pageTitle('Home');
+    pageTitle("Home");
     window.scrollTo(0, 0);
 
     const interval = setInterval(() => {
@@ -143,9 +144,9 @@ export default function Home() {
 
   return (
     <>
-      <ConsultationForm 
-        isOpen={showConsultation} 
-        onClose={() => setShowConsultation(false)} 
+      <ConsultationForm
+        isOpen={showConsultation}
+        onClose={() => setShowConsultation(false)}
       />
       <Hero
         title={currentShowcase.title}
@@ -195,26 +196,25 @@ export default function Home() {
       </Div> */}
       <Spacing lg="150" md="80" />
 
-<Div className={styles.statsContainer}>
-  {[
-    { value: '20+', label: 'Business Scaled' },
-    { value: '98%', label: 'Client Satisfaction' },
-    { value: '24x7', label: 'Support' },
-    { value: '10+', label: 'Expert Mentors' }
-  ].map((stat, index) => (
-    <motion.div
-      key={index}
-      className={styles.statItem}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
-      <h3 className={styles.statValue}>{stat.value}</h3>
-      <p className={styles.statLabel}>{stat.label}</p>
-    </motion.div>
-  ))}
-</Div>
-
+      <Div className={styles.statsContainer}>
+        {[
+          { value: "20+", label: "Business Scaled" },
+          { value: "98%", label: "Client Satisfaction" },
+          { value: "24x7", label: "Support" },
+          { value: "10+", label: "Expert Mentors" },
+        ].map((stat, index) => (
+          <motion.div
+            key={index}
+            className={styles.statItem}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <h3 className={styles.statValue}>{stat.value}</h3>
+            <p className={styles.statLabel}>{stat.label}</p>
+          </motion.div>
+        ))}
+      </Div>
 
       <Spacing lg="150" md="80" />
 
@@ -227,36 +227,50 @@ export default function Home() {
         />
         <Spacing lg="50" md="30" />
         <Div className="row">
-          
           {/* Young Entrepreneurs */}
           <Div className="col-lg-4">
-            <Div className={`cs-shadow_box_1 ${styles['cs-target_card']}`}>
-              <img src="/images/demo/Sprint%20Start%20Up%20Illustrations%20-%20Illustrations.jpeg" alt="Young Entrepreneurs" className="cs-icon" />
+            <Div className={`cs-shadow_box_1 ${styles["cs-target_card"]}`}>
+              <img
+                src="/images/demo/Sprint%20Start%20Up%20Illustrations%20-%20Illustrations.jpeg"
+                alt="Young Entrepreneurs"
+                className="cs-icon"
+              />
               <h4 className="cs-font_30">Young Entrepreneurs</h4>
               <p className="cs-font_16">
-                Targeting Gen-Z innovators with mentorship and business advisory to help them build successful ventures.
+                Targeting Gen-Z innovators with mentorship and business advisory
+                to help them build successful ventures.
               </p>
             </Div>
           </Div>
 
           {/* Startups & MSMEs */}
           <Div className="col-lg-4">
-            <Div className={`cs-shadow_box_1 ${styles['cs-target_card']}`}>
-              <img src="/images/demo/Supermarket.jpeg" alt="Startups & MSMEs" className="cs-icon" />
+            <Div className={`cs-shadow_box_1 ${styles["cs-target_card"]}`}>
+              <img
+                src="/images/demo/Supermarket.jpeg"
+                alt="Startups & MSMEs"
+                className="cs-icon"
+              />
               <h4 className="cs-font_30">Startups & MSMEs</h4>
               <p className="cs-font_16">
-                Supporting business compliance, financial advisory, and mentorship to help them scale and succeed.
+                Supporting business compliance, financial advisory, and
+                mentorship to help them scale and succeed.
               </p>
             </Div>
           </Div>
 
           {/* Families */}
           <Div className="col-lg-4">
-            <Div className={`cs-shadow_box_1 ${styles['cs-target_card']}`}>
-              <img src="/images/demo/“My Mom Has ADHD__ Stories of Growing Up with an ADD Mother.jpeg" alt="Families" className="cs-icon" />
+            <Div className={`cs-shadow_box_1 ${styles["cs-target_card"]}`}>
+              <img
+                src="/images/demo/“My Mom Has ADHD__ Stories of Growing Up with an ADD Mother.jpeg"
+                alt="Families"
+                className="cs-icon"
+              />
               <h4 className="cs-font_30">Families</h4>
               <p className="cs-font_16">
-                Focused on financial literacy, long-term planning, and guidance for children’s skill acquisition.
+                Focused on financial literacy, long-term planning, and guidance
+                for children’s skill acquisition.
               </p>
             </Div>
           </Div>
@@ -283,11 +297,14 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div className={styles.cardIcon}>
-                <img src="/images/icons/mission_icon.svg" alt="Business Service" />
+                <img
+                  src="/images/icons/mission_icon.svg"
+                  alt="Business Service"
+                />
               </div>
               <h3>Business Service</h3>
               <p>Scale your business with experts and comprehensive support</p>
-              <ul className={styles['aligned-list']}>
+              <ul className={styles["aligned-list"]}>
                 <li>Virtual Co-Founder</li>
                 <li>Digital Transformation</li>
                 <li>Legal Consultancy</li>
@@ -303,11 +320,14 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className={styles.cardIcon}>
-                <img src="/images/icons/vision_icon.svg" alt="Personal Finance" />
+                <img
+                  src="/images/icons/vision_icon.svg"
+                  alt="Personal Finance"
+                />
               </div>
               <h3>Personal Finance</h3>
               <p>Build and manage your wealth with personalised startegies</p>
-              <ul className={styles['aligned-list']}>
+              <ul className={styles["aligned-list"]}>
                 <li>Investment Planning</li>
                 <li>Debt Management</li>
                 <li>Tax Planning</li>
@@ -336,7 +356,10 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/virtual-co-founder.svg" alt="Virtual Co-Founder" />
+              <img
+                src="/images/icons/virtual-co-founder.svg"
+                alt="Virtual Co-Founder"
+              />
             </div>
             <h3>Virtual Co-Founder</h3>
           </motion.div>
@@ -349,7 +372,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/digital.svg" alt="Digital Transformation" />
+              <img
+                src="/images/icons/digital.svg"
+                alt="Digital Transformation"
+              />
             </div>
             <h3>Digital Transformation</h3>
           </motion.div>
@@ -362,7 +388,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/legal-advisory.svg" alt="Legal Consultancy" />
+              <img
+                src="/images/icons/legal-advisory.svg"
+                alt="Legal Consultancy"
+              />
             </div>
             <h3>Legal Consultancy</h3>
           </motion.div>
@@ -375,7 +404,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/business-advisory.svg" alt="Business Advisory" />
+              <img
+                src="/images/icons/business-advisory.svg"
+                alt="Business Advisory"
+              />
             </div>
             <h3>Business Advisory</h3>
           </motion.div>
@@ -413,7 +445,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/debt-management.svg" alt="Debt Management" />
+              <img
+                src="/images/icons/debt-management.svg"
+                alt="Debt Management"
+              />
             </div>
             <h3>Debt Management</h3>
           </motion.div>
@@ -426,7 +461,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/digital-transformation.svg" alt="Tax Planning" />
+              <img
+                src="/images/icons/digital-transformation.svg"
+                alt="Tax Planning"
+              />
             </div>
             <h3>Tax Planning</h3>
           </motion.div>
@@ -439,7 +477,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className={styles.cardIcon}>
-              <img src="/images/icons/consulting.svg" alt="Investment Advisory" />
+              <img
+                src="/images/icons/consulting.svg"
+                alt="Investment Advisory"
+              />
             </div>
             <h3>Masterclasses & Workshops</h3>
           </motion.div>
@@ -468,7 +509,11 @@ export default function Home() {
                 <img src="/images/icons/mission_icon.svg" alt="Mission" />
               </div>
               <h3>Our Mission</h3>
-              <p>To empower businesses and individuals with innovative financial solutions and expert guidance for sustainable growth and wealth creation.</p>
+              <p>
+                To empower businesses and individuals with innovative financial
+                solutions and expert guidance for sustainable growth and wealth
+                creation.
+              </p>
             </motion.div>
 
             <motion.div
@@ -482,7 +527,10 @@ export default function Home() {
                 <img src="/images/icons/vision_icon.svg" alt="Vision" />
               </div>
               <h3>Our Vision</h3>
-              <p>To become world's most trusted platform for integrated business growth and wealth management services.</p>
+              <p>
+                To become world's most trusted platform for integrated business
+                growth and wealth management services.
+              </p>
             </motion.div>
           </Div>
         </Div>
